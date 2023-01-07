@@ -1,0 +1,32 @@
+body {
+    background-color: #26274564;
+}
+
+.sem {
+    flex-direction: row;
+    display: flex;
+    gap: 5rem;
+}
+
+.table {
+    padding-left: 100px;
+}
+
+.btn-container {
+    padding-left: 700px;
+}
+
+#btn {
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    border-radius: 20px;
+}
+
+input[type="text"] {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}

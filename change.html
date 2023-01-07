@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="styles1.css" /> -->
+    <link rel="stylesheet" href="styles3.css">
     <title>Table</title>
 
 
@@ -13,43 +13,61 @@
 
 <body>
     <div class="main-form" id="main">
-        <form class="semester">
-            <select id="semester" required>
-                <option hidden selected>semester</option>
-                <option>s1</option>
-                <option>s3</option>
-                <option>s5</option>
-                <option>s7</option>
-            </select>
-        </form>
-        <form class="department">
-            <select id="department" required>
-                <option hidden selected>department</option>
-                <option>CSE</option>
-                <option>ECE</option>
-                <option>ME</option>
-            </select>
-        </form>
-        <input type="text" disabled><input type="text" disabled value="1"><input type="text" disabled value="2"><input
-            type="text" disabled value="3"><input type="text" disabled value="4"><input type="text" disabled
-            value="5"><input type="text" disabled value="6"><input type="text" disabled value="7"><br>
-        <input type="text" disabled value="Monday"><input type="text" id="m1"><input type="text" id="m2"><input
-            type="text" id="m3"><input type="text" id="m4"><input type="text" id="m5"><input type="text" id="m6"><input
-            type="text" id="m7"><br>
-        <input type="text" disabled value="Tuesday"><input type="text" id="tu1"><input type="text" id="tu2"><input
-            type="text" id="tu3"><input type="text" id="tu4"><input type="text" id="tu5"><input type="text"
-            id="tu6"><input type="text" id="tu7"><br>
-        <input type="text" disabled value="Wednesday"><input type="text" id="w1"><input type="text" id="w2"><input
-            type="text" id="w3"><input type="text" id="w4"><input type="text" id="w5"><input type="text" id="w6"><input
-            type="text" id="w7"><br>
-        <input type="text" disabled value="Thursday"><input type="text" id="th1"><input type="text" id="th2"><input
-            type="text" id="th3"><input type="text" id="th4"><input type="text" id="th5"><input type="text"
-            id="th6"><input type="text" id="th7"><br>
-        <input type="text" disabled value="Friday"><input type="text" id="f1"><input type="text" id="f2"><input
-            type="text" id="f3"><input type="text" id="f4"><input type="text" id="f5"><input type="text" id="f6"><input
-            type="text" id="f7"><br>
-    </div>
-    <div><button type="button" name="btn" id="btn">submit</button></div>
+        <div class="heading">
+            <h1>Semester and Batch</h1>
+            <hr>
+        </div>
+        <div class="sem">
+            <form class="semester">
+                Semester:
+                <select id="semester" required>
+                    <option hidden selected>semester</option>
+                    <option>s1</option>
+                    <option>s3</option>
+                    <option>s5</option>
+                    <option>s7</option>
+                </select>
+            </form>
+            <form class="department">
+                Department:
+                <select id="department" required>
+                    <option hidden selected>Department</option>
+                    <option>CSE</option>
+                    <option>ECE</option>
+                    <option>ME</option>
+                </select>
+            </form>
+        </div><br><br><br>
+        <div>
+            <h1>Time Table</h1>
+            <hr>
+        </div>
+        <br>
+        <div class="table">
+            <input type="text" disabled><input type="text" disabled value="1"><input type="text" disabled
+                value="2"><input type="text" disabled value="3"><input type="text" disabled value="4"><input type="text"
+                disabled value="5"><input type="text" disabled value="6"><input type="text" disabled value="7"><br>
+            <input type="text" disabled value="Monday"><input type="text" id="m1"><input type="text" id="m2"><input
+                type="text" id="m3"><input type="text" id="m4"><input type="text" id="m5"><input type="text"
+                id="m6"><input type="text" id="m7"><br>
+            <input type="text" disabled value="Tuesday"><input type="text" id="tu1"><input type="text" id="tu2"><input
+                type="text" id="tu3"><input type="text" id="tu4"><input type="text" id="tu5"><input type="text"
+                id="tu6"><input type="text" id="tu7"><br>
+            <input type="text" disabled value="Wednesday"><input type="text" id="w1"><input type="text" id="w2"><input
+                type="text" id="w3"><input type="text" id="w4"><input type="text" id="w5"><input type="text"
+                id="w6"><input type="text" id="w7"><br>
+            <input type="text" disabled value="Thursday"><input type="text" id="th1"><input type="text" id="th2"><input
+                type="text" id="th3"><input type="text" id="th4"><input type="text" id="th5"><input type="text"
+                id="th6"><input type="text" id="th7"><br>
+            <input type="text" disabled value="Friday"><input type="text" id="f1"><input type="text" id="f2"><input
+                type="text" id="f3"><input type="text" id="f4"><input type="text" id="f5"><input type="text"
+                id="f6"><input type="text" id="f7"><br>
+
+        </div>
+        <br>
+        <hr>
+        <br><br><br>
+        <div class="btn-container"><button type="button" name="btn" id="btn">submit</button></div>
 </body>
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
@@ -165,7 +183,7 @@
         var semester = String(document.getElementById("semester").value)
         var department = String(document.getElementById("department").value)
         console.log(newdata)
-        setDoc(doc(db, department, semester), newdata).then(()=>{
+        setDoc(doc(db, department, semester), newdata).then(() => {
             console.log("hiiii")
         })
         // db.collection('mbccet').doc(department).set(newdata)

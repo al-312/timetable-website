@@ -31,7 +31,7 @@ body {
 
 .calendar img {
     height: 500px;
-    width: 643px;
+    width: 462px;
 
 }
 
@@ -57,7 +57,8 @@ body {
     border-radius: 10px;
     margin-left: 200px;
     background-color: #23243C;
-    margin-top: -34;
+    margin-top: 182px;
+    margin-left: 10px;
 }
 
 .info select {
@@ -81,12 +82,10 @@ body {
     margin-top: 37px;
     text-align: center;
     border-radius: 20px;
-}
-
-.submit {
     padding-top: 15px;
     color: #23243C;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .admin {
@@ -96,7 +95,7 @@ body {
     color: #fff;
     padding-top: 10px;
     text-align: center;
-    margin-left: 157px;
+    margin-left: 309px;
 
 }
 

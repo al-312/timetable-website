@@ -16,12 +16,11 @@
         <div class="sub">
             <div class="cat"><img src="assets/cats.svg"></div>
             <div class="info">
-                <h1 style="color: #fff; padding: 20px 30px;">Student Portal</h1>
+                <h1 style="color: #fff; padding: 20px 30px;">Admin portal</h1>
                 <input type="text" class="txt" id="email" placeholder="e-Mail">
-                <input type="password" class="txt" id="password" placeholder="Password">
+                <input type="password" class="txt" id="password" placeholder="Password"><br><br>
                 <!-- <a href="timetable.html"> -->
                 <button type="submit" id="btn" name="btn">Submit</button>
-                <div class="admin"><a href="admin-portal.html">Admin Login</a></div>
                 <!-- </a> -->
             </div>
         </div>
@@ -68,7 +67,7 @@
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    window.location.href = "./student-options.html";
+                    window.location.href = "./change.html";
                     // ...
 
                 })
