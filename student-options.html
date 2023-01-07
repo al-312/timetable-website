@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Time table</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="angle-rect"></div>
+        <div class="calendar"><img src="assets/calendar.svg"> </div>
+        <div class="sub">
+            <div class="cat"><img src="assets/cats.svg"></div>
+           
+            <div class="info">
+                <form class="semester">
+                    <select id="semester" required>
+                        <option hidden selected>semester</option>
+                        <option>s1</option>
+                        <option>s3</option>
+                        <option>s5</option>
+                        <option>s7</option>
+                    </select>
+                </form>
+                <form class="department">
+                    <select id="department" required>
+                        <option hidden selected>department</option>
+                        <option>CSE</option>
+                        <option>ECE</option>
+                        <option>ME</option>
+                    </select>
+                </form>
+                <!-- <a href="timetable.html"> -->
+                    <div class="submit" id="btn">submit</div>
+                <!-- </a> -->
+            </div>
+        </div>
+        <div class="admin"><a href="admin-page.html">admin-page</a></div>
+    </div>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> -->
+
+    <script type="module" src="source.js"></script>
+
+</body>
+
+</html>

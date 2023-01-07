@@ -1,0 +1,10 @@
+.txt{
+    width: 300px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 25px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 20px;
+    color: #0d0e28b5;
+}
